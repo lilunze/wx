@@ -2,7 +2,8 @@
   "pages":[
     "pages/welcome/welcome",
     "pages/posts/post",
-    "pages/movies/movies"
+    "pages/movies/movies",
+    "pages/music/music"
   ],
   "window":
   {
@@ -11,6 +12,8 @@
   "tabBar":
   {
     "borderStyle": "white",
+    "color":"#8a8a8a",
+    "selectedColor":"#1296db",
     "list":
     [
       {
@@ -24,6 +27,12 @@
         "text": "电影",
         "iconPath":"/images/tab/movies.png",
         "selectedIconPath":"/images/tab/movies-s.png"
+      },
+      {
+        "pagePath": "pages/music/music",
+        "text": "音乐",
+        "iconPath":"/images/tab/music.png",
+        "selectedIconPath":"/images/tab/music-s.png"
       }
     ]
   }

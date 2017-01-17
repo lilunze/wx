@@ -1,0 +1,23 @@
+@import "../movie/movie-template.wxss";
+
+.list-container
+{
+    text-align: center;
+}
+.list-title
+{
+    font-size: 32rpx;
+    height: 32rpx;
+    line-height: 32rpx;
+    padding: 30rpx 20rpx 22rpx;
+}
+.category
+{
+    float: left;
+}
+.more-link
+{
+    float: right;
+    font-size: 28rpx;
+    color: #208ef5;
+}

@@ -1,0 +1,11 @@
+.stars-container image
+{
+    width: 26rpx;
+    height: 26rpx;
+}
+.stars-container .score
+{
+    color: #1f3463;
+    padding-left: 20rpx;
+    font-size: 30rpx;
+}

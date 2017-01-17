@@ -1,0 +1,24 @@
+@import "../stars/stars-template.wxss";
+
+.movie-container
+{
+    display: inline-block;
+    width: 200rpx;
+    padding: 0 22rpx;
+}
+.movie-container .movie-img
+{
+    width: 200rpx;
+    height: 270rpx;
+    padding-bottom: 14rpx;
+}
+.movie-container .movie-name
+{
+    font-size: 32rpx;
+    margin-bottom: 14rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient: vertical;
+}
