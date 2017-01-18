@@ -1,11 +1,4 @@
-<view class="container">
-    <view>
-        <image src="/images/avatar.jpg" class="avatar"></image>
-    </view>
-    <view class="welcome-text">
-        <text>hello , 卡西莫多</text>  
-    </view>
-    <view class="start-btn" ontap='onTap'>
-        <text>开启小程序之旅</text>
-    </view>
+<view class="timeout">
+    <text class="count">{{count}}</text>
+    <text>s</text>
 </view>
