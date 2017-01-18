@@ -59,6 +59,22 @@ Page({
             news:news
         };
         this.setData(readyData);
+    },
+
+    details:function(url)
+    {
+        wx.navigateTo({
+          url: 'url',
+          success: function(res){
+            // success
+          },
+          fail: function() {
+            // fail
+          },
+          complete: function() {
+            // complete
+          }
+        })
     }
 
 })
