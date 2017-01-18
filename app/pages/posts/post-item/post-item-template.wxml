@@ -1,0 +1,15 @@
+<template name="post-item-template">
+  <view class="article-list">
+    <view class="article-info">
+      <image src="/images/avatar/author.png" class="author-avatar"></image>
+      <text class="timestamp">{{date}}</text>
+      <text class="author-name">{{author}}</text>
+    </view>
+    <view class="article-img-container">
+      <image src="{{coverageUrl}}" class="article-img"></image>
+    </view>
+    <view class="article-title">
+      <text>{{title}}</text>
+    </view>
+  </view>
+</template>

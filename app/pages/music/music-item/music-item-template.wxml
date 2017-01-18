@@ -1,0 +1,11 @@
+<template name="music-item-template">
+    <view class="music-item">
+        <image src="{{coverageUrl}}"></image>
+        <view class="music-item-name">
+            <text>{{name}}</text>
+        </view>
+        <view class="music-item-desc">
+            <text>{{desc}}</text>
+        </view>
+    </view>
+</template>

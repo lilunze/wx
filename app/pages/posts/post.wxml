@@ -1,42 +1,9 @@
+<import src="post-item/post-item-template.wxml" />
+
 <view class="container">
-  <swiper class="swiper-container" indicator-dots='true'>
-    <swiper-item>
-      <image src="/images/banner/banner-1.jpg"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="/images/banner/banner-2.jpg"></image>
-    </swiper-item>
-  </swiper>
-  <view class="article-list">
-    <view class="article-info">
-        <image src="/images/avatar/author-1.jpg" class="author-avatar"></image>
-        <text class="timestamp">January 06 2017</text>
-         <text class="author-name">lilunze</text>
-    </view>
-    <view>
-        <image src="/images/banner/banner-3.jpg" class="article-img"></image>
-    </view>
-    <view class="article-title">
-        去你妈的微信小程序
-    </view>
-    <view class="article-description">
-        微信web开发者工具，好垃圾的IDE，没有报错没有报错没有报错没有报错，好烦啊好烦啊好烦啊啊啊啊啊啊啊啊
-    </view> 
-  </view>
-  <view class="article-list">
-    <view class="article-info">
-        <image src="/images/avatar/author-1.jpg" class="author-avatar"></image>
-        <text class="timestamp">January 06 2017</text>
-         <text class="author-name">lilunze</text>
-    </view>
-    <view>
-        <image src="/images/banner/banner-3.jpg" class="article-img"></image>
-    </view>
-    <view class="article-title">
-        去你妈的微信小程序
-    </view>
-    <view class="article-description">
-        微信web开发者工具，好垃圾的IDE，没有报错没有报错没有报错没有报错，好烦啊好烦啊好烦啊啊啊啊啊啊啊啊
-    </view> 
-  </view>
+    <block wx:for="{{news.news}}" wx:for-item="item">
+        <view>
+            <template is="post-item-template" data="{{...item}}"></template>
+        </view>
+    </block>
 </view>

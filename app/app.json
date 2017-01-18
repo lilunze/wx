@@ -7,7 +7,7 @@
   ],
   "window":
   {
-      "navigationBarBackgroundColor": "#000"
+      "navigationBarBackgroundColor": "#1296db"
   },
   "tabBar":
   {
@@ -18,7 +18,7 @@
     [
       {
         "pagePath": "pages/posts/post",
-        "text": "文章",
+        "text": "头条",
         "iconPath":"/images/tab/read.png",
         "selectedIconPath":"images/tab/read-s.png"
       }, 

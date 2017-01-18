@@ -1,0 +1,13 @@
+<import src="music-list/music-list-template.wxml" />
+
+<view>
+    <view class="list-item">
+        <template is="music-list-template" data="{{...newList}}"></template>
+    </view>
+    <view class="list-item">
+        <template is="music-list-template" data="{{...recList}}"></template>
+    </view>
+    <view class="list-item">
+        <template is="music-list-template" data="{{...hotList}}"></template>
+    </view>
+</view>

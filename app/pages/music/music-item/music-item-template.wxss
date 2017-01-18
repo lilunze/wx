@@ -1,0 +1,38 @@
+.music-item
+{
+    display: inline-block;
+    width: 210rpx;
+    height: 460rpx;
+    margin: 0 8rpx 20rpx;
+    padding: 10rpx 10rpx 0;
+    vertical-align: top;
+    border: 1rpx solid #9d9d9d;
+}
+.music-item image
+{
+    width: 200rpx;
+    height: 200rpx;
+    border: 1rpx solid #9d9d9d;
+}
+.music-item .music-item-name
+{
+    font-size: 32rpx;
+    margin-bottom: 14rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient: vertical;
+    font-weight: bold;
+}
+.music-item .music-item-desc
+{
+    font-size: 28rpx;
+    margin-bottom: 14rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:5;
+    -webkit-box-orient: vertical;
+    text-align: left;
+}
