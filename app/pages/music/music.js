@@ -83,6 +83,14 @@ Page({
             music:music
         };
         this.setData(readyData);
+    },
+
+    listDetail:function(event)
+    {
+        var id=event.currentTarget.dataset.id;
+        wx.navigateTo({
+          url: 'music-list-detail/music-list-detail?id='+id
+        })
     }
 
 })

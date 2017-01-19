@@ -1,5 +1,5 @@
 <template name="post-item-template">
-  <view class="article-list" data-url="{{url}}" ontap="details({{url}})">
+  <view class="article-list" data-url="{{url}}" ontap="details">
     <view class="article-info">
       <image src="/images/avatar/author.png" class="author-avatar"></image>
       <text class="timestamp">{{date}}</text>

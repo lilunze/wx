@@ -61,19 +61,11 @@ Page({
         this.setData(readyData);
     },
 
-    details:function(url)
+    details:function(event)
     {
+        var str=event.currentTarget.dataset.url.substring(31,46);
         wx.navigateTo({
-          url: 'url',
-          success: function(res){
-            // success
-          },
-          fail: function() {
-            // fail
-          },
-          complete: function() {
-            // complete
-          }
+          url: "post-detail/post-detail?str="+str,
         })
     }
 

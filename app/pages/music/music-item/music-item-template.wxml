@@ -1,5 +1,5 @@
 <template name="music-item-template">
-    <view class="music-item">
+    <view class="music-item" data-id="{{id}}" ontap="listDetail">
         <image src="{{coverageUrl}}"></image>
         <view class="music-item-name">
             <text>{{name}}</text>
