@@ -13,7 +13,7 @@ Page({
             else
             {
                 wx.switchTab({
-                    url: '../posts/post'
+                    url: '../movies/movies'
                     })
                 clearInterval(s);
             }
