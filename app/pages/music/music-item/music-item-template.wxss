@@ -1,38 +1,29 @@
+@import "../stars/stars-template.wxss";
 .music-item
 {
     display: inline-block;
-    width: 210rpx;
-    height: 460rpx;
+    width: 220rpx;
+    height: 400rpx;
     margin: 0 8rpx 20rpx;
-    padding: 10rpx 10rpx 0;
     vertical-align: top;
-    border: 1rpx solid #9d9d9d;
+    border: 1px solid #ddd;
 }
-.music-item image
+.music-item .cover
 {
-    width: 200rpx;
-    height: 200rpx;
-    border: 1rpx solid #9d9d9d;
+    width: 218rpx;
+    height: 210rpx;
+     border-bottom: 1px solid #ddd; 
 }
 .music-item .music-item-name
 {
     font-size: 32rpx;
+    height: 80rpx;
     margin-bottom: 14rpx;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp:1;
+    -webkit-line-clamp:2;
     -webkit-box-orient: vertical;
     font-weight: bold;
-}
-.music-item .music-item-desc
-{
-    font-size: 28rpx;
-    margin-bottom: 14rpx;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp:6;
-    -webkit-box-orient: vertical;
-    text-align: left;
+    padding: 0 10rpx;
 }

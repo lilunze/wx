@@ -1,15 +1,16 @@
+<import src="../../movies/stars/stars-template.wxml" />
 <template name="post-item-template">
-  <view class="article-list" data-url="{{url}}" ontap="details">
-    <view class="article-info">
-      <image src="/images/avatar/author.png" class="author-avatar"></image>
-      <text class="timestamp">{{date}}</text>
-      <text class="author-name">{{author}}</text>
-    </view>
+  <view class="article-list" data-id="{{id}}" ontap="details">
     <view class="article-img-container">
       <image src="{{coverageUrl}}" class="article-img"></image>
     </view>
-    <view class="article-title">
-      <text>{{title}}</text>
+    <view class="article-info">
+      <view class="book-title">{{title}}</view>
+      <template is="stars-template" data="{{stars:stars,score:score}}"></template>
+      <view class="author-name">作者：{{author}}</view>
+      <view class="tags">{{tags}}</view>
+      <view class="publisher">{{publisher}}</view>
+      <view class="price">￥{{price}}</view>
     </view>
   </view>
 </template>

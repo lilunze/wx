@@ -10,9 +10,9 @@ Page({
 
     onLoad:function(event)
     {
-        var newListUrl="http://www.duomi.com/list-list-getlist?id=user_new&pi=1&pz=8&_=2474545";
-        var recListUrl="http://www.duomi.com/list-list-getlist?id=user_rec&pi=1&pz=8&_=2474556";
-        var hotListUrl="http://www.duomi.com/list-list-getlist?id=user_hot&pi=1&pz=8&_=2474550";
+        var newListUrl = app.globalData.doubanBaseUrl +"/v2/music/search?tag=%E7%83%AD%E9%97%A8&&count=6";
+        var recListUrl = app.globalData.doubanBaseUrl +"/v2/music/search?tag=%E6%B5%81%E8%A1%8C&&count=6";
+        var hotListUrl = app.globalData.doubanBaseUrl +"/v2/music/search?tag=%E5%8E%9F%E5%88%9B&&count=6";
        
         this.getMusicListData(newListUrl,'newList');
         this.getMusicListData(recListUrl,'recList');
@@ -31,8 +31,7 @@ Page({
           success: function(res)
           {
             // success
-            console.log(res);
-            me.processDuomiData(res.data,key);
+            me.processDoubanData(res.data.musics,key);
           },
           fail: function(err) 
           {
@@ -42,38 +41,38 @@ Page({
         })
     },
 
-    processDuomiData:function(data,key)
+    processDoubanData:function(data,key)
     {
         var title="";
         if(key=="newList")
         {
-            title="最新歌单";
+            title="热门歌曲";
         }
         else if(key=="recList")
         {
-            title="推荐歌单";
+            title="流行歌曲";
         }
         else
         {
-            title="最热歌单";
+            title="原创歌曲";
         }
         var music=[];
-        for(var i in data.childs)
+        for(var i in data)
         {
-            if(i<6)
-            {
-                var child=data.childs[i];
-                var temp=
-                {
-                name:child.name,
-                desc:child.description,
-                id:child.id,
-                coverageUrl:child.coverurl,
-                creator:child.creator.nick_name,
-                creatorImage:child.creator.portrait
-                };
-                music.push(temp);
-            }
+          var child=data[i];
+          console.log(child);
+          var temp=
+          {
+          name:child.title,
+          // desc:child.description,
+          id:child.id,
+          coverageUrl:child.image,
+          score: child.rating.average,
+          stars: utils.formateStars(child.rating.average),
+          // creator:child.creator.nick_name,
+          // creatorImage:child.creator.portrait
+          };
+          music.push(temp);
         }
 
         var readyData={};

@@ -8,9 +8,8 @@ Page({
 
     onLoad:function(event)
     {
-        var newsUrl="http://v.juhe.cn/toutiao/index?type=top&key=7695c5b9527a2b64f50de7be299c2170";
-       
-        this.getnewsListData(newsUrl);     
+      var newsUrl = app.globalData.doubanBaseUrl +"/v2/book/search?tag=%E7%83%AD%E9%97%A8";      
+      this.getnewsListData(newsUrl);     
     },
 
     getnewsListData:function(url)
@@ -25,8 +24,7 @@ Page({
           success: function(res)
           {
             // success
-            console.log(res);
-            me.processNewsData(res.data);
+            me.processNewsData(res.data.books);
           },
           fail: function(err) 
           {
@@ -39,16 +37,21 @@ Page({
     processNewsData:function(data)
     {
         var news=[];
-        for(var i in data.result.data)
+        console.log(data);
+        for(var i in data)
         {
-            var newsItem=data.result.data[i];
+            var newsItem=data[i];
             var temp=
             {
-               author:newsItem.author_name,
-               date:newsItem.date,
+               author:newsItem.author,
+               tags: newsItem.tags[0].name + '/' + newsItem.tags[1].name + '/' + newsItem.tags[2].name,
                title:newsItem.title,
-               coverageUrl:newsItem.thumbnail_pic_s,
-               url:newsItem.url
+               coverageUrl:newsItem.images.large,
+               id:newsItem.id,
+               publisher:newsItem.publisher,
+               score: newsItem.rating.average,
+               stars: utils.formateStars(newsItem.rating.average/1.8),
+               price: newsItem.price
             };
             news.push(temp);
         }
@@ -63,10 +66,10 @@ Page({
 
     details:function(event)
     {
-        var str=event.currentTarget.dataset.url.substring(31,46);
-        wx.navigateTo({
-          url: "post-detail/post-detail?str="+str,
-        })
+      var id = event.currentTarget.dataset.id
+      wx.navigateTo({
+        url: "post-detail/post-detail?id="+id,
+      })
     }
 
 })

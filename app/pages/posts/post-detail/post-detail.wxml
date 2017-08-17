@@ -1,0 +1,31 @@
+<import src="../../movies/stars/stars-template.wxml" />
+<view class="book-detail">
+  <view class="book-info">
+    <view class="book-title">{{book.title}}</view>
+    <view class="article-img-container">
+       <image src="{{book.images.large}}" class="article-img"></image> 
+    </view>
+    <view class="article-info">
+      <view class="author-name">作者：{{book.author}}</view>
+      <view class="publisher">{{book.publisher}}</view>
+      <view class="date">出版年：{{book.pubdate}}</view>
+      <view class="pages">页数：{{book.pages}}</view>   
+      <view class="price">定价：￥{{book.price}}</view>
+      <view class="binding">装帧：{{book.binding}}</view>
+      <view class="isbn">ISBN：{{book.isbn13}}</view>
+      <template is="stars-template" data="{{stars:stars.stars,score:stars.score}}"></template> 
+    </view>
+  </view>
+  <view class="book-desc">
+    <view class="desc-title">内容简介</view>
+    <view class="desc-text">{{book.summary}}</view>
+  </view>
+  <view class="author-desc">
+    <view class="desc-title">作者简介</view>
+    <view class="desc-text">{{book.author_intro}}</view>
+  </view>
+  <view class="catalog">
+    <view class="desc-title">目录</view>
+    <view class="desc-text"><text>{{book.catalog}}</text></view>
+  </view>
+</view>
