@@ -1,0 +1,44 @@
+<import src="../../movies/stars/stars-template.wxml" />
+<view class="book-detail">
+  <view class="book-info">
+    <view class="book-title">{{movie.title}}({{movie.year}})</view>
+    <view class="article-img-container">
+       <image src="{{movie.images.large}}" class="article-img"></image> 
+    </view>
+    <view class="article-info">
+      <view class="author-name">导演：
+         <block wx:for="{{movie.directors}}" wx:for-item="director">
+          <text>{{director.name}} </text>
+        </block>
+      </view>
+      <!-- <view class="publisher">{{book.publisher}}</view> -->
+      <view class="date">类型：{{movie.genres}}</view>
+      <view class="pages">制片国家/地区：{{movie.countries}}</view>   
+      <view class="price">又名：
+         <block wx:for="{{movie.aka}}" wx:for-item="aka">
+          <text>{{aka}} </text>
+        </block>
+      </view>  
+      <template is="stars-template" data="{{stars:stars,score:movie.rating.average}}"></template> 
+      <view class="isbn">有{{movie.collect_count}}人看过</view>
+      <view class="isbn">有{{movie.wish_count}}人想看</view>  
+    </view>
+  </view>
+  <view class="book-desc">
+    <view class="desc-title">剧情简介</view>
+    <view class="desc-text"><text>{{movie.summary}}</text></view>
+  </view>
+  <view class="author-desc">
+    <view class="desc-title">主演</view>
+    <view class="casts">
+      <block wx:for="{{movie.casts}}" wx:for-item="cast">
+            <view class="cast">
+              <view class="avatar">
+                <image src="{{cast.avatars.large}}"></image>
+              </view>
+              <view class="cast-name">{{cast.name}}</view>
+            </view>           
+        </block>
+    </view>
+  </view>
+</view>

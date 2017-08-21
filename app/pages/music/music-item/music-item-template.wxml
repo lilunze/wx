@@ -1,10 +1,13 @@
  <import src="../stars/stars-template.wxml" /> 
 <template name="music-item-template">
     <view class="music-item" data-id="{{id}}" ontap="listDetail">
-        <image src="{{coverageUrl}}" class="cover"></image>
+      <text>{{test}}</text>
+        <image src="{{pic||cover_url||avatar}}" class="cover"></image>
         <view class="music-item-name">
-            <text>{{name}}</text>
+            <text>{{name||sound.name}}</text>
         </view>
-        <template is="stars-template" data="{{stars:stars,score:score}}"></template>
+       <view class="music-author">
+            <text>{{channel.name||famous_type_title||sound.channel.name}}</text>
+       </view>
     </view>
 </template>

@@ -2,12 +2,24 @@
 
 <view>
     <view class="list-item">
-        <template is="music-list-template" data="{{...newList}}"></template>
+        <template is="music-list-template" data="{{...hot_recommend}}"></template>
     </view>
     <view class="list-item">
-        <template is="music-list-template" data="{{...recList}}"></template>
+        <template is="music-list-template" data="{{...sound_hot}}"></template>
     </view>
     <view class="list-item">
-        <template is="music-list-template" data="{{...hotList}}"></template>
+        <template is="music-list-template" data="{{...sound_origin}}"></template>
     </view>
+     <!-- <view class="list-item">
+        <template is="music-list-template" data="{{...mv_hot}}"></template>
+    </view>
+     <view class="list-item">
+        <template is="music-list-template" data="{{...famous}}"></template>
+    </view>
+    <view class="list-item">
+        <template is="music-list-template" data="{{...album}}"></template>
+    </view>
+    <view class="list-item">
+        <template is="music-list-template" data="{{...recommend}}"></template>
+    </view> -->
 </view>

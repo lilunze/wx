@@ -1,9 +1,12 @@
 <import src="../music-item/music-item-template.wxml" />
 <template name="music-list-template">
     <view>
-        <view class="list-category">{{categoryTitle}}</view>
-        <block wx:for="{{music}}" wx:for-item="item">
+        <view class="list-category">{{title}}</view>
+        <block wx:for="{{data}}" wx:for-item="item" wx:for-index="idx">
+           <view wx:if="{{idx < 6}}" class="item-wrap">
             <template is="music-item-template" data="{{...item}}"></template>
+           </view>
+            
         </block>
     </view>
 </template>

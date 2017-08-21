@@ -1,0 +1,98 @@
+@import "../../movies/stars/stars-template.wxss";
+.article-img-container
+{
+    display: inline-block;
+    width: 280rpx;
+    height: 360rpx;
+    overflow: hidden;
+    margin: 20rpx;
+}
+.book-title
+{
+  font-size: 42rpx;
+  font-weight: bold;
+  line-height: 40rpx;
+  margin: 60rpx 30rpx 20rpx;
+}
+.article-img {
+  width: 100%;
+}
+.article-info {
+  display: inline-block;
+  width: 380rpx;
+  vertical-align: top;
+  margin: 20rpx 0;
+}
+.date,.pages,.price,.binding,.author-name,.publisher
+{
+  font-size: 24rpx;
+  color: #666;
+  margin: 10rpx 0;
+}
+.price
+{
+  /* margin-bottom: 70rpx; */
+  height: 80rpx;
+}
+.isbn
+{
+  font-size: 24rpx;
+  color: #888;
+  /* margin-bottom: 20rpx; */
+}
+.book-info
+{
+  margin-bottom: 50rpx;
+}
+.book-desc,.catalog
+{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.desc-title
+{
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+.desc-text
+{
+  font-size: 24rpx;
+  text-indent: 48rpx;
+  line-height: 40rpx;
+  margin-bottom: 50rpx;
+  color: #666;
+}
+.catalog .desc-text
+{
+  text-indent: 0;
+  padding-left: 50rpx;
+}
+.stars-container .score
+{
+  color: #E76648;
+}
+.author-desc .casts
+{
+  text-align: center;
+}
+.author-desc .cast
+{
+  display: inline-block;
+  vertical-align: top;
+  width: 170rpx;
+  margin: 0 5rpx;
+  font-size: 24rpx;
+}
+.author-desc image
+{
+  width: 100%;
+  height: 220rpx;
+}
+.author-desc .desc-title{
+  padding: 0 20rpx;
+}
+.cast-name
+{
+  line-height: 40rpx;
+  margin-bottom: 50rpx;
+}

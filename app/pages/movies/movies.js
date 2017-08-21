@@ -1,5 +1,6 @@
 var app=getApp();
 var utils=require('../../utils/utils.js');
+var amapFile = require('../../libs/amap-wx.js');
 Page({
     data: 
     {
@@ -10,6 +11,17 @@ Page({
 
     onLoad:function(event)
     {
+      var myAmapFun = new amapFile.AMapWX({ key: '6f5387ae72b319c6d4e163a2225317c2' });
+        myAmapFun.getRegeo({
+          success: function (data) {
+            //成功回调
+            console.log(data);
+          },
+          fail: function (info) {
+            //失败回调
+            console.log(info)
+          }
+        })
         var inTheatersUrl=app.globalData.doubanBaseUrl+"/v2/movie/in_theaters" + "?start=0&count=3";
         var commingSoonUrl=app.globalData.doubanBaseUrl+"/v2/movie/coming_soon"+"?start=0&count=3";
         var top250Url=app.globalData.doubanBaseUrl+"/v2/movie/top250"+"?start=0&count=3";
@@ -74,6 +86,13 @@ Page({
             movies:movies
         };
         this.setData(readyData);
+    },
+
+    details: function (event) {
+      var id = event.currentTarget.dataset.id
+      wx.navigateTo({
+        url: "movie-detail/movie-detail?id=" + id,
+      })
     }
 
 })

@@ -3,27 +3,40 @@
 {
     display: inline-block;
     width: 220rpx;
-    height: 400rpx;
+    height: 360rpx;
     margin: 0 8rpx 20rpx;
     vertical-align: top;
-    border: 1px solid #ddd;
 }
 .music-item .cover
 {
-    width: 218rpx;
-    height: 210rpx;
-     border-bottom: 1px solid #ddd; 
+    width: 220rpx;
+    height: 220rpx;
 }
 .music-item .music-item-name
 {
-    font-size: 32rpx;
-    height: 80rpx;
-    margin-bottom: 14rpx;
+    font-size: 24rpx;
+    line-height: 30rpx;
+    height: 60rpx;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp:2;
     -webkit-box-orient: vertical;
-    font-weight: bold;
     padding: 0 10rpx;
+    text-align: left;
+}
+.music-author
+{
+  font-size: 22rpx;
+  color: #999;
+  text-align: left;
+  line-height: 30rpx;
+  height: 30rpx;
+   text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:1;
+    -webkit-box-orient: vertical;
+    padding: 0 10rpx;
+    margin-top: 20rpx;
+    overflow: hidden
 }

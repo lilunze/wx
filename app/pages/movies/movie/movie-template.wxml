@@ -1,6 +1,6 @@
 <import src="../stars/stars-template.wxml" />
 <template name="movie-template">
-    <view class="movie-container">
+    <view class="movie-container" data-id="{{movieId}}" ontap="details">
         <image src="{{coverageUrl}}" class="movie-img"></image>
         <view class="movie-name">
             <text>{{name}}</text>

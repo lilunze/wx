@@ -1,9 +1,13 @@
 {
   "pages":[
-    "pages/posts/post",
-    "pages/posts/post-detail/post-detail",
-    "pages/movies/movies",
     "pages/music/music",
+    "pages/posts/post",
+    "pages/movies/movies",
+    "pages/movies/movie-detail/movie-detail",
+    
+    "pages/posts/post-detail/post-detail",
+   
+    
     "pages/music/music-list-detail/music-list-detail"
   ],
   "window":

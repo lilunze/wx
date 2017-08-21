@@ -1,4 +1,3 @@
-<import src="../../movies/stars/stars-template.wxml" />
 <view class="book-detail">
   <view class="book-info">
     <view class="book-title">{{book.title}}</view>
