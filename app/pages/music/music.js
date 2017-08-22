@@ -1,5 +1,6 @@
 var app=getApp();
 var utils=require('../../utils/utils.js');
+// var WxParse = require('../../libs/wxParse/wxParse.js');
 Page({
     data: 
     {
@@ -14,15 +15,40 @@ Page({
 
     onLoad:function(event)
     {
-      var hot_recommend ="https://www.app-echo.com/api/other/index"
-      var famous ="https://www.app-echo.com/api/famous/famous-user?limit=5";
-      var album = "https://www.app-echo.com/api/album/list?limit=20&condation=1%3A0%2C2%3A0";
-      var recommend ="https://www.app-echo.com/api/recommend/sound-day?page=1";
+      var index = "https://www.app-echo.com/sound/exploration";
+      // var hot_recommend ="https://www.app-echo.com/api/other/index"
+      // var famous ="https://www.app-echo.com/api/famous/famous-user?limit=5";
+      // var album = "https://www.app-echo.com/api/album/list?limit=20&condation=1%3A0%2C2%3A0";
+      // var recommend ="https://www.app-echo.com/api/recommend/sound-day?page=1";
        
-        this.get_hot_recommend(hot_recommend);
+       this.get_index(index);
+      //  this.get_index(index);
+        // this.get_hot_recommend(hot_recommend);
         // this.get_famous(famous);   
         // this.get_album(album);  
         // this.get_recommend(recommend);    
+    },
+
+    get_index:function(url)
+    {
+      var me = this;
+      wx.request
+      ({
+        url: url,
+        data: {},
+        method: 'GET',//OPTIONS,GET,HEAD,POST,PUT,DELETE, TRACE, CONNECT
+        dataType: 'json',
+        header: { 'content-type': 'application/json', 'Accept': ' application/json','x-requested-with': 'XMLHttpRequest' }, // 设置请求的 header
+        success: function (res) {
+          // success
+          console.log(res);
+          var data=res.data
+        },
+        fail: function (err) {
+          // fail
+          console.log(err);
+        }
+      })
     },
 
     get_hot_recommend:function(url)

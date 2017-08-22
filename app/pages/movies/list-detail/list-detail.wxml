@@ -1,0 +1,14 @@
+<import src="../movie-list/movie-list.wxml" />
+<view class="loading" wx-if="{{show!=1}}">
+  <image src="/images/background/loading.gif"></image>
+</view>
+<view  wx-if="{{classify==1}}">
+  <template is="movie-list-template" data="{{...inTheaters}}"></template>
+</view>
+<view wx-if="{{classify==2}}">
+    <template is="movie-list-template" data="{{...commingSoon}}"></template>
+</view>
+<view wx-if="{{classify==3}}">
+  <template is="movie-list-template" data="{{...top250}}"></template>
+</view>
+

@@ -1,4 +1,0 @@
-<view class="timeout">
-    <text class="count">{{count}}</text>
-    <text>s</text>
-</view>

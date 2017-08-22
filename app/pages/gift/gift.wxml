@@ -1,0 +1,7 @@
+<view class="cash">
+  <view class="cash-container">
+    <view class="cash-title">二维码收款</view>
+    <image src="/images/tab/cash.png"></image>
+    <view class="cash-text">扫码支持</view>
+  </view>
+</view>

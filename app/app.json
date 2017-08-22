@@ -1,14 +1,16 @@
 {
-  "pages":[
-    "pages/music/music",
+  "pages":[ 
     "pages/posts/post",
     "pages/movies/movies",
-    "pages/movies/movie-detail/movie-detail",
+    "pages/gift/gift",
+    "pages/movies/list-detail/list-detail",
     
+    
+    "pages/movies/movie-detail/movie-detail",
     "pages/posts/post-detail/post-detail",
-   
     
     "pages/music/music-list-detail/music-list-detail"
+    
   ],
   "window":
   {
@@ -34,10 +36,10 @@
         "selectedIconPath":"/images/tab/movies-s.png"
       },
       {
-        "pagePath": "pages/music/music",
-        "text": "音乐",
-        "iconPath":"/images/tab/music.png",
-        "selectedIconPath":"/images/tab/music-s.png"
+        "pagePath": "pages/gift/gift",
+        "text": "捐赠",
+        "iconPath": "/images/tab/gift.png",
+        "selectedIconPath": "/images/tab/gift-s.png"
       }
     ]
   }

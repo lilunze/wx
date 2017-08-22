@@ -1,0 +1,36 @@
+page
+{
+  background: red;
+}
+.cash-container
+{
+  width: 680rpx;
+  height: 800rpx;
+  background: #fff;
+  margin: 100rpx auto 0;
+  border-radius: 10rpx;
+  overflow: hidden;
+  text-align: center;
+}
+.cash image
+{
+  width: 300rpx;
+  height: 300rpx;
+  margin-top: 140rpx;
+}
+.cash-title
+{
+  height: 100rpx;
+  background: #fafafa;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  color: #d4b439;
+}
+.cash-text
+{
+  font-size: 40rpx;
+  margin-top: 80rpx;
+  color: #d9b857;
+}

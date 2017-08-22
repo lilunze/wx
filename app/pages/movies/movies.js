@@ -11,11 +11,13 @@ Page({
 
     onLoad:function(event)
     {
+      var me=this;
       var myAmapFun = new amapFile.AMapWX({ key: '6f5387ae72b319c6d4e163a2225317c2' });
         myAmapFun.getRegeo({
           success: function (data) {
             //成功回调
-            console.log(data);
+            var adcode = data[0].regeocodeData.addressComponent.province;
+            me.getMovieListData(inTheatersUrl, 'inTheaters',{'city':'上海'});
           },
           fail: function (info) {
             //失败回调
@@ -29,7 +31,7 @@ Page({
         // var usBoxUrl=app.globalData.doubanBaseUrl+"/v2/movie/us_box"+"?start=0&count=3";
         // var newMoviesUrl=app.globalData.doubanBaseUrl+"/v2/movie/new_movies"+"?start=0&count=3";
        
-        this.getMovieListData(inTheatersUrl,'inTheaters');
+        
         this.getMovieListData(commingSoonUrl,'commingSoon');
         this.getMovieListData(top250Url,'top250');
         // this.getMovieListData(weeklyUrl);
@@ -37,19 +39,18 @@ Page({
         // this.getMovieListData(newMoviesUrl);        
     },
 
-    getMovieListData:function(url,key,movies)
+    getMovieListData:function(url,key,data,movies)
     {
         var me=this;
         wx.request
         ({
           url: url,
-          data: {},
+          data: data,
           method: 'GET',//OPTIONS,GET,HEAD,POST,PUT,DELETE, TRACE, CONNECT
           header: {"Content-Type":"json"}, // 设置请求的 header
           success: function(res)
           {
             // success
-            console.log(res);
             me.processDoubanData(res.data,key);
           },
           fail: function(err) 
@@ -93,6 +94,15 @@ Page({
       wx.navigateTo({
         url: "movie-detail/movie-detail?id=" + id,
       })
+    },
+
+    listDetail:function(event){
+      var tag = event.currentTarget.dataset.tag
+      wx.navigateTo({
+        url: "list-detail/list-detail?tag=" + tag,
+      })
     }
+
+
 
 })
