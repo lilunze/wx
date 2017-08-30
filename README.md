@@ -16,6 +16,13 @@ Details: Json.object.url;
 
 top250-List：https://api.douban.com/v2/movie/top250?start=0&count=3;
 ```
+
+**豆瓣电影详情**
+
+```
+https://api.douban.com/v2/movie/subject/id参数
+```
+
 **多米音乐**
 
 ```
@@ -30,3 +37,19 @@ top250-List：https://api.douban.com/v2/movie/top250?start=0&count=3;
 ```
 http://v.juhe.cn/weixin/query?key=92d46712a1334901b5eaf67292319662
 ```
+
+**豆瓣图书搜索**
+
+```
+https://api.douban.com/v2/book/search?tag=热门
+```
+
+**豆瓣图书详情页**
+
+```
+https://api.douban.com/v2/book/id参数
+```
+
+## 扫码捐赠
+
+![](qrcode.jpg)
